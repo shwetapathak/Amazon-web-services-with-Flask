@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>Assignment 5 - Introduction to Amazon Web Services</title>
+        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body>
+        <div id="container">
+            <div id="content">
+            <h1> Welcome to the Patient data system</h1><br />
+                <form method="post" action="{{ url_for('GetData') }}">
+                    <b> Provide a Provider_Id :</b>
+                    <input type="text" name="id" />
+                  <input type="submit" name ="Get Results"/>
+                </form>
+                
+                
+                </div>
+           </div>
+    </body>
+</html>
+ 

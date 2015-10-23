@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>Patient details are :</title>
+        </head>
+    <body>
+        <div id="container">
+            <div id="content">
+                <b> Time taken to load :{{time}}</b><br /><br /><br />
+					
+			</div>
+			<table border=2>
+			<tr>
+			<td>Id</td>
+			<td>DRG_Definition</td>
+			<td>Provider_Id</td>
+			<td>Provider_Name</td>
+			<td>Address</td>
+			<td>City</td>
+			<td>State</td>
+			<td>Zip</td>
+			<td>Region</td>
+			<td>Total_discharge</td>
+			<td>Average_Covered_Charges</td>
+			<td>Average_Total_Payments</td>
+			<td>Average_Medicare_Payments</td></tr>
+			<tr>{% for row in list_item %}
+			<td>{{row['Id']}}</td>
+			<td>{{row['DRG_Definition']}}</td>
+			<td>{{row['Provider_Id']}}</td>
+			<td>{{row['Provider_Name']}}</td>
+			<td>{{row['Address']}}</td>
+			<td>{{row['City']}}</td>
+			<td>{{row['State']}}</td>
+			<td>{{row['Zip']}}</td>
+			<td>{{row['Region']}}</td>
+			<td>{{row['Total_discharge']}}</td>
+			<td>{{row['Average_Covered_Charges']}}</td>
+			<td>{{row['Average_Total_Payments']}}</td>
+			<td>{{row['Average_Medicare_Payments']}}</td>
+			</tr>
+			{% endfor %}
+			</table>
+        </div>
+    </body>
+</html>
