@@ -23,7 +23,7 @@ def GetData():
     start_time = time.clock()
     Provider_Id = request.form['id']
    
-    conn = boto.dynamodb.connect_to_region('us-west-2',aws_access_key_id='AKIAJGQE6BZY4X7LYAYA',aws_secret_access_key='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')
+    conn = boto.dynamodb.connect_to_region('us-west-2',aws_access_key_id='access_key',aws_secret_access_key='secret_access_key')
     
     table = conn.get_table('Inpatient_data')
     item = table.scan(scan_filter={'Provider_Id': boto.dynamodb.condition.EQ(Provider_Id)})
